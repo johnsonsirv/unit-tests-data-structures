@@ -1,4 +1,4 @@
-# Unit tests for Data Structures
+# Unit Tests for Data Structures
 In this project  an writing unit tests for data structures implemented in Javascript.
 
 # Methods (Actions)
