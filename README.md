@@ -2,4 +2,4 @@
 In this project  an writing unit tests for data structures implemented in Javascript.
 
 # Methods
-These
+List of methods and their aliases that can be used on each datastructure.
