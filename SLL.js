@@ -91,8 +91,22 @@ class SinglyLinkedList{
         this.length++;
         return true;
     }
-    add_at(index, value){
+    remove(index){
+        if(index < 0 || index >= this.length) return false
+        if(index === 0){
+            this.shift(value);
+            return true;
+        }
+        if(index === this.length-1){
+            this.pop(value);
+            return true;
+        }
+        let beforeNode = this.get(index - 1);
+        let removed = beforeNode.next;
+        beforeNode.next = removed.next;
+        this.length--;
 
+        return removed;
     }
     pop(){
         if(!this.head) return undefined;
