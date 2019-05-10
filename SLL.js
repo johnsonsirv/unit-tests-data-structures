@@ -169,7 +169,15 @@ class SinglyLinkedList{
         }
     }
 
-   
+    print(){
+        const arr=[]
+        let current = this.head
+        while(current){
+            arr.push(current.value)
+            current = current.next
+        }
+        console.log(arr)
+    }
 }
 
 let list = new SinglyLinkedList();
