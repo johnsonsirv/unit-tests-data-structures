@@ -115,7 +115,7 @@ class SinglyLinkedList{
         while(temp.next!=null){
             newTail = temp;
             temp = temp.next
-        }
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
         this.tail = newTail;
         this.tail.next= null;
         this.length--;
@@ -152,6 +152,10 @@ class SinglyLinkedList{
             return true
         }
         return false;
+    }
+
+    reverse(){
+        if (!this.head) return undefined
     }
 
 }
