@@ -155,9 +155,21 @@ class SinglyLinkedList{
     }
 
     reverse(){
-        if (!this.head) return undefined
+        if (this.length === 0) return undefined
+        let currentNode = this.head;
+        this.head = this.tail;
+        this.tail = currentNode;
+        let previousNode = null;
+        let nextNode = null;
+        while(currentNode.next != null){
+            nextNode = currentNode.next
+            currentNode.next = previousNode
+            previousNode = currentNode
+            currentNode = nextNode
+        }
     }
 
+   
 }
 
 let list = new SinglyLinkedList();
