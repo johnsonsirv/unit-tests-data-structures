@@ -161,7 +161,7 @@ class SinglyLinkedList{
         this.tail = currentNode;
         let previousNode = null;
         let nextNode = null;
-        while(currentNode.next != null){
+        while(currentNode){
             nextNode = currentNode.next
             currentNode.next = previousNode
             previousNode = currentNode
