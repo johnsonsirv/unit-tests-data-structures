@@ -42,8 +42,8 @@ class Queue{
     constructor(){
         this.list = new SinglyLinkedList
     }
-
+    //Push method, adds an item to the end of the queue
     push(value){
-        
+        this.list.push(value)
     }
 }
