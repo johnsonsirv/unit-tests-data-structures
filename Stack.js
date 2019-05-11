@@ -54,6 +54,6 @@ class Stack{
 
     // Pop method removes the last item added to the stack
     pop(){
-        
+        this.list.pop()
     }
 }
