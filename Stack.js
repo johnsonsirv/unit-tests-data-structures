@@ -39,7 +39,7 @@ class SinglyLinkedList{
             this.head = null;
             this.tail = null;
         }
-        return temp;
+        return temp.value;
     }
 }
 
@@ -52,4 +52,8 @@ class Stack{
         this.list.push(data)
     }
 
+    // Pop method removes the last item added to the stack
+    pop(){
+        
+    }
 }
