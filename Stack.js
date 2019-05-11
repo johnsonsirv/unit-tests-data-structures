@@ -57,3 +57,20 @@ class Stack{
         this.list.pop()
     }
 }
+
+const stack = new Stack
+stack.push(3)
+stack.push(5)
+stack.pop()
+//Returns 5
+
+stack.push(2)
+stack.push(7)
+stack.pop()
+//returns 7
+
+stack.pop()
+//returns 2
+
+stack.pop()
+//returns 3
