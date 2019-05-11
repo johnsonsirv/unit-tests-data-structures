@@ -42,8 +42,27 @@ class Queue{
     constructor(){
         this.list = new SinglyLinkedList
     }
-    //Push method, adds an item to the end of the queue
+    //push method, adds an item to the end of the queue
     push(value){
         this.list.push(value)
     }
+
+    //pop method, removes item from the begining of the queue
+    pop(){
+        return this.list.shift()
+    }
 }
+
+const queue = new Queue
+queue.push(3)
+queue.push(5)
+//returns 3
+
+queue.push(2)
+queue.push(7)
+console.log(queue.pop())
+//returns 5
+console.log(queue.pop())
+//returns 2
+console.log(queue.pop())
+// returns 7
