@@ -1,5 +1,5 @@
 /* 
-    start = 1
+start = 1
 spare = dest - start
 dest =3
 
@@ -9,7 +9,7 @@ move 1 from start to destination
 mover n-1 from spare to destinaton
 
 */
-
+//Moves any n-size of disk on the tower at 2^n - 1 steps
 function tower(n, start=1, dest=3, spare = 2){
     if (n===1) console.log('move' + start + '->' + dest)
     else{
