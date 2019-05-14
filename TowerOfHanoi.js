@@ -11,5 +11,15 @@ mover n-1 from spare to destinaton
 */
 
 function Tower(n, start=1, dest=3, spare = 2){
-    
+
+}
+
+// Move only n=2 discs on the tower
+function move(start, goal, n=2){
+    if (n==1)  console.log(start + '->' +goal)
+    else{
+        move(start, goal-start, n-1)
+        move(start, goal, 1)
+        move(gaol-start, goal, n-1)
+    }
 }
