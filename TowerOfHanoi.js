@@ -10,8 +10,13 @@ mover n-1 from spare to destinaton
 
 */
 
-function Tower(n, start=1, dest=3, spare = 2){
-
+function tower(n, start=1, dest=3, spare = 2){
+    if (n===1) console.log('move' + start + '->' + dest)
+    else{
+        tower(n-1, start, dest, spare)
+        tower(1, start, dest, spare)
+        tower(n-1, spare, dest, start)
+    }
 }
 
 // Move only n=2 discs on the tower
@@ -26,3 +31,5 @@ function move(start, goal, n=2){
 
 move(1,3)
 move(2,3)
+
+tower(3)
