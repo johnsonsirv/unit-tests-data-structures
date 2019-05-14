@@ -20,6 +20,9 @@ function move(start, goal, n=2){
     else{
         move(start, goal-start, n-1)
         move(start, goal, 1)
-        move(gaol-start, goal, n-1)
+        move(goal-start, goal, n-1)
     }
 }
+
+move(1,3)
+move(2,3)
