@@ -36,5 +36,6 @@ function step(start, goal, spare, n=2){
 
 move(1,3)
 move(2,3)
+move(3,1)
 
 tower(3)
