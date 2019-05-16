@@ -21,11 +21,16 @@ function tower(n, start=1, dest=3, spare = 2){
 
 // Move only n=2 discs on the tower
 function move(start, goal, n=2){
-    if (n==1)  console.log(start + '->' +goal)
+   spare = Math.abs(goal-start);
+   step(start, goal, spare)
+}
+
+function step(start, goal, spare, n=2){
+    if(n===1) console.log(start +'->'+goal)
     else{
-        move(start, goal-start, n-1)
-        move(start, goal, 1)
-        move(goal-start, goal, n-1)
+        step(start, spare, goal, n-1);
+        step(start, goal, spare, 1);
+        step(spare, goal, start, n-1);
     }
 }
 
