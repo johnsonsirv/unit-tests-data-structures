@@ -1,3 +1,4 @@
+//prime number as the size of the array
 function hash(key, arrayLength) {
   let total = 0
   const WEIRD_PRIME = 0
