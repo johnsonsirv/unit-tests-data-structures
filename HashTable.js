@@ -6,7 +6,7 @@ function hash_function(n) {
 }
 
 class HashTable{
-  constructor(size = 53){
+  constructor(size = 17){
     this.keyMap = new Array(size)
   }
 
@@ -22,6 +22,10 @@ class HashTable{
   }
 
   set(key, value){
-    
+    let index = this.hash(key)
+    if(!this.keyMap[index]){
+      this.keyMap[index] = []
+    }
+    this.keyMap[index].push([key, value])
   }
 }
