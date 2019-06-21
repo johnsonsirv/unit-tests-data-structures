@@ -22,7 +22,7 @@ class HashTable{
   }
 
   set(key, value){
-    let index = this.hash(key)
+    let index = this.r_hash(key)
     if(!this.keyMap[index]){
       this.keyMap[index] = []
     }
@@ -30,7 +30,7 @@ class HashTable{
   }
 
   get(key){
-    let index = this.hash(key)
+    let index = this.r_hash(key)
     if(this.keyMap[index]){
       for(let i = 0; i < this.keyMap[index].length; i++){
         if (this.keyMap[index][i][0] === key) {
@@ -40,6 +40,11 @@ class HashTable{
     }
     return undefined
   }
+
+  r_hash(key){
+    return Math.abs(key) % 11
+  }
+
 
 }
 
