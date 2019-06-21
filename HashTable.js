@@ -32,7 +32,7 @@ class HashTable{
   get(key){
     let index = this.hash(key)
     if(this.keyMap[index]){
-      for(i = 0; i < this.keyMap[index].length; i++){
+      for(let i = 0; i < this.keyMap[index].length; i++){
         if (this.keyMap[index][i][0] === key) {
           return this.keyMap[index][i][1]
         }
@@ -40,6 +40,12 @@ class HashTable{
     }
     return undefined
   }
+
 }
 
 let ht = new HashTable(17)
+ht.set("singer", "jamie")
+ht.set("gamer", "julius")
+ht.set("footballer", "abbey")
+ht.set("golfer", "ifeanyi")
+ht.set("geek", "victor")
